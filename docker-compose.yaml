@@ -1,0 +1,36 @@
+  services:
+    node1:
+      # build:
+      #   dockerfile: ./Dockerfile
+      image: wushie/ec2:latest
+      container_name: node1
+      ports:
+        - "2221:22"  # Adjust host port as needed
+      environment:
+        SSH_USERNAME: kocak
+        SSH_PASSWORD: kocak
+        AUTHORIZED_KEYS: ""  # Optionally, add your SSH keys here
+
+    node2:
+      # build:
+      #   dockerfile: ./Dockerfile
+      image: wushie/ec2:latest
+      container_name: node2
+      ports:
+        - "2222:22"  # Adjust host port as needed
+      environment:
+        SSH_USERNAME: kocak
+        SSH_PASSWORD: kocak
+        AUTHORIZED_KEYS: ""
+
+    node3:
+      # build:
+      #   dockerfile: ./Dockerfile
+      image: wushie/ec2:latest
+      container_name: node3
+      ports:
+        - "2223:22"  # Adjust host port as needed
+      environment:
+        SSH_USERNAME: kocak
+        SSH_PASSWORD: kocak
+        AUTHORIZED_KEYS: ""
